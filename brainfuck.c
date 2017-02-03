@@ -90,7 +90,7 @@ Instruction* parseSubstring(char* str, size_t start, size_t end)
         }
         if (instruction_added) {
             index += 1;
-            if (index > buf_size) {
+            if (index >= buf_size) {
                 buf_size += BUF_SIZE;
                 instructions = realloc(instructions, sizeof(Instruction) * buf_size);
 
